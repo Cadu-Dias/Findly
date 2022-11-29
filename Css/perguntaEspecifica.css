@@ -1,0 +1,46 @@
+#identificador_foto_usuario {
+    visibility: hidden;
+}
+
+.fontCorp{
+    font-size: 34px;
+}
+.barra{
+    border-bottom: 3px solid rgb(168, 166, 166);
+}
+.padInf{
+    padding-bottom: 2%;
+}
+.padInf2{
+    padding-bottom: 4%;
+}
+.padEsq{
+    padding-left: 0.8%;
+}
+.margResp{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 9%;
+}
+textarea{
+    color: black;
+}
+.editAre{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    margin-left: 11%;
+    border-radius: 40px;
+    background-color: #d9d9d9;
+}
+.editRes{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.editImg{
+    padding-left: 7%;
+}
+.editImgSet{
+    padding-left: 3%;
+}

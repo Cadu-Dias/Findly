@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/perguntaEspecifica.css">
+    <link rel="stylesheet" href="Css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
+    <title>Pergunta especifica</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pagina1.html" onclick="removerItensLocalStorage()" ><img class="logo"src="esseaqui.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white tamCab mx-3 Cab" onclick="removerItensLocalStorage()" aria-current="page"
+                            href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" onclick="removerItensLocalStorage()"href="perguntar.html">Perguntar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab"onclick="removerItensLocalStorage()" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" onclick="removerItensLocalStorage()" id="login_cadastro"
+                            href="login.html">Login/Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botao_usuario Cab" onclick="removerItensLocalStorage()" href="perfil.html">
+                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>>
+
+<body onload="pegarDadosPergunta();pegarDadosResposta();">
+    <article class="container-fluid">
+        <div class="row">
+            <article class="offset-1 col-9 barra padInf">
+                <div class="ml-2 h3 padEsq parte_pergunta">
+                    <img src="usuario.png" alt="" width="64px" class="mb-2 foto_usuario_pergunta">
+                    <strong class="mb-5" id="nome_usuario_pergunta">Nome usuario</strong>
+                    <div class="h1 titulo_pergunta">Titulo da pergunta</div>
+                </div>
+                <span class="mt-5 fontCorp descricao_pergunta">
+                    Corpo da pergunta - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum laborum, animi
+                    nesciunt exercitationem volupttum aliquid quaeratobcaecati. Officiis itaque
+                    atque repudiandae, recusandae doloribus mnis consequuntur, quam eligendi et at facilis?
+                </span>
+            </article>
+            <footer class="col align-self-center">
+                <img src="seta.png" alt="" class="botao_cima" width="50px" onclick="aumentarContador()"><br>
+                <label for="" class="tam editImgSet contador_pergunta">0</label><br>
+                <img src="seta.png" alt="" class="botao_baixo" width="50px" style="transform: rotate(180deg);" onclick="diminuirContador()">
+            </footer>
+        </div>
+            <article class="row article_resposta">
+                <div class="h1 margResp">Respostas</div>
+                <main class="offset-1 col-9 barra padInf2">
+                    <div class="resposta">
+                    
+                    </div>
+                </main>
+            </article>
+            <article>
+                <div class="h1 offset-1 editRes col-10">Responda você mesmo</div>
+                <textarea name="" id="textarea_resposta" cols="30" rows="7" class="col-9 border border-4 border-secondary editAre"
+                    placeholder="Escreva a sua resposta aqui"></textarea>
+            </article>
+            <article>
+                <button class="btn btn-primary mt-5 col-2 offset-9 rounded-pill p-2 tamCab" onclick="inserirResposta()">
+                    <strong>Enviar Resposta</strong>
+                </button>
+            </article>
+
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/perguntaEspecifica.js"></script>
+</body>
+<footer class="cinzaEscuro">
+    <div class="mt-5 text-white p-5 text-center">Todos os direitos reservados ©</div>
+</footer>
+
+</html>

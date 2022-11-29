@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/estilos.css">
+    <link rel="stylesheet" href="Css/perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
+    <title>Perfil usuario</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pagina1.html"><img src="esseaqui.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
+                            href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
+                            href="login.html">Login/Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botao_usuario Cab" href="perfil.html">
+                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body onload="mostrarDados();perguntaAprovada()">
+    <article class="container-fluid">
+
+        <head class="">
+            <div class="row">
+                <span class="col-4">
+                    <img src="usuario.png" width="300px" class="offset-5">
+                </span>
+                <div class="col-xl-6 col-12 offset-xl-1 medio align-self-center ">
+                    <div class="nome_usuario">Nome:Cadu Dias</div>
+                    <div class="email_usuario">E-mail:cadubas@gmail.com</div>
+                </div>
+                    <button class="btn btn-danger col-2 offset-9 rounded-pill peq mb-5" onclick="sairDaConta()">
+                        <Strong>Sair</Strong>
+                    </button>
+            </div>
+        </head>
+        <main class="row">
+            <div class="h1 offset-1 barra col-10 pt-5">
+                Sua pergunta mais curtida:
+            </div>
+            <section class="row mb-5">
+            <div class="offset-1 col-1 align-self-center">
+                <img src="coracao.png" alt="" class="" width="80px"><br>
+                <label for="" class="tam editImg d-flex justify-content-center" id="contador_pergunta">0</label>
+            </div>
+                <label class="border border-3 border-dark col-9 fontText p-4 margLab">
+                    <div class="h1 marg" id="pergunta_titulo">Você ainda não realizou sua Pergunta!</div>
+                    <div id="pergunta_descricao">
+                        Para realiza-lá vá na aba de perguntar coloque o titulo, a descrição e escolha a matéria e envie-a!
+                        qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </label>
+        </section>
+        <div class="h1 offset-1 barra col-10 pt-5">
+            Sua resposta mais curtida:
+        </div>
+        <section class="row">
+            <div class="offset-1 col-1 align-self-center">
+                <img src="imagem/coracao.png" alt="" class="" width="80px"><br>
+                <label for="" class="tam editImg d-flex justify-content-center" id="resposta_curtida">0</label>
+            </div>
+                <label class="border border-3 border-dark col-9 fontText p-4 margLab">
+                    <div class="h1 marg" id="resposta_titulo">Você ainda não respondeu uma pergunta!</div>
+                    <div id="resposta_descricao">
+                        Para realiza-lá vá na aba de disciplinas, escolha uma pergunta para responde-lá, clique nela e procure a região de enviar resposta
+                    </div>
+                </label>
+        </section>
+        </main>
+    </article>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/perfil.js"></script>
+</body>
+<footer class="cinzaEscuro">
+    <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
+</footer>
+
+</html>

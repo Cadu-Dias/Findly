@@ -1,0 +1,28 @@
+#identificador_foto_usuario {
+    visibility: hidden;
+}
+
+.imgPad{
+    margin-left: 65%;
+}
+.fontText{
+    font-size: 34px;
+    background-color: #e4e2e2;
+    border-radius: 30px;
+}
+.marg{
+    margin-left: 2%;
+}
+.barra{
+    border-top: 5px solid rgb(202, 201, 201);
+}
+.margTop{
+    margin-top: 3%;
+}
+.editImg{
+    padding-right: 40%;
+}
+.margLab{
+    margin-left: -2%;
+    margin-top: 1%;
+}

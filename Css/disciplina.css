@@ -1,0 +1,36 @@
+#identificador_foto_usuario {
+    visibility: hidden;
+}
+
+.sl{
+    color: aliceblue;
+}
+.tamPer{
+    font-size: 40px;
+}
+.font{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.diferentes_perguntas:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.tamNam{
+    font-size: 30px;
+}
+.dist0{
+    margin-left: 12%;
+}
+.botoes{
+    position: relative;
+    left: 88%;
+    bottom: 300px;
+}
+.botao_cima{
+    margin-left: 6%;
+    
+}
+.botao_baixo{
+    width: 50px;
+    margin-left: 6%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/estilos.css">
+    <link rel="stylesheet" href="Css/perguntar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
+    <title>Findly - Perguntar</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pagina1.html"><img src="esseaqui.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
+                            href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
+                            href="login.html">Login/Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botao_usuario" href="perfil.html">
+                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body onload="inserirTitulo()">
+    <article class="container-fluid">
+        <head>
+            <div class="gramHead text-center">
+                Faça sua pergunta!
+            </div>
+        </head>
+        <main>
+            <label for="titulo" class="offset-1 tit col mb-2 ">Titulo</label>
+            <p>
+                <input type="text" placeholder="Escreva seu titulo aqui!" id="titulo"
+                    class="col-10 offset-1 p-3 border border-4 border-secondary tamInp mb-2">
+            </p>
+            <label for="mensagem" class="tit offset-1 mb-2">Mensagem</label>
+            <p>
+                <textarea id="mensagem" cols="30" rows="10" 
+                class="col-10 offset-1 border border-4 border-secondary tamInp textInp" 
+                placeholder="Escreva sua pergunta aqui"></textarea>
+            </p>
+        </main>
+        <footer>
+            <div class="tit offset-1 col-11">
+                Selecione a materia da sua pergunta:
+            </div>
+            <select name="disciplina" id="dist"
+            class="text-white bg-primary p-2 mt-4 col-4 offset-1 
+            text-center h3 rounded-pill border border-primary sel">
+        
+                <option>Lógica Matemática e Matemática Discreta</option>
+                <option>Estatistica</option>
+                <option>Legislação e Etica em Tecnologia da Informação</option>
+                <option>Desenvolvimento Front-End</option>
+                <option>Interface e Experiência do Usuário</option>
+                </select>
+        <button class="btn btn-primary mt-5 col-2 offset-9 rounded-pill botao" onclick="enviarPergunta()">
+            <Strong>Enviar</Strong>
+        </button>
+        </footer>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/perguntar.js"></script>
+</body>
+<footer class="cinzaEscuro">
+    <div class="mt-5 text-white p-5 text-center">Todos os direitos reservados ©</div>
+</footer>
+
+</html>

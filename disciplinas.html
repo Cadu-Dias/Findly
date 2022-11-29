@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/disciplina.css">
+    <link rel="stylesheet" href="Css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
+    <title>Disciplinas</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pagina1.html"><img src="esseaqui.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
+                            href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
+                            href="login.html">Login/Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botao_usuario Cab" href="perfil.html">
+                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body onload="pegarPergunta()" >
+    <article class="container-fluid">
+    <div class="col-6 offset-3 tam text-center" for="dist">Qual diciplina voce deseja escolher?</div>
+    <select name="disciplina" id="dist"
+        class="sl bg-primary p-2 mt-4 col-4 offset-4 text-center h2 rounded-pill border border-primary" onchange="especificar_materia()">
+        <option>Todas as Matérias</option>
+        <option>Lógica Matemática e Matemática Discreta</option>
+        <option>Estatistica</option>
+        <option>Legislação e Etica em Tecnologia da Informação</option>
+        <option>Desenvolvimento Front-End</option>
+        <option>Interface e Experiência do Usuário</option>
+    </select>
+    <!-- <section class="container">
+        <article class="row">
+            <div class="distSel offset-1 tamPer font mb-5">Perguntas de todas as matérias</div>
+            <article class="col-3 offset-1">
+                <div class="col h3">
+                    <img src="imagem/usuario.png" alt="" class="offset-1" width="64px">
+                    <strong>Nome usuario</strong>
+                </div>
+            </article>
+            <div class="font h1 mpTitu">Titulo da pergunta
+            </div>
+            <span class="">
+            <div class="mpTitu font h2 my-0 col-10">Corpo da pergunta -
+                Lorem ipsum dolor sit amet.
+                Ut deleniti commodi ut dolores eius sit iure odit et accusantium
+                reiciendis. Sed sequi nihil in rerum enim aut dolore
+                perferendis ut rerum ipsum et rerum dolores ea corrupti praesentium
+                id voluptas dolores. </div>
+            </span>
+        </article>
+    </section> -->
+        <section class="container mt-5 pt-5 seccao_pergunta">
+            <div class="offset-1 tamPer mb-5" id="pergunta_materia_x">Perguntas de todas as materias</div>
+
+            <div class="row perguntas" >
+                
+                 <!-- <div><img src="foto_perfil.png" alt="" width="90px"><strong class="tamNam ms-5">Nome usuario</strong></div>
+                <div class="h1 mt-5">Titulo da pergunta</div>
+                <div class="medio col-10">Corpo da pergunta Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Id culpa quasi quae error iste omnis pariatur numquam, odio, repellat tempore,
+                        voluptate et vitae! Cum doloremque id nesciunt nihil, a quaerat.</div>
+                <div class="col-2">                
+                    <img src="Captura de tela 2022-11-16 092440.png" alt="" class="botao_cima" width="50px"><br>
+                    <label for="" class="tam dist0">0</label><br>
+                    <img src="Captura de tela 2022-11-16 092440.png" alt="" class="botao_baixo" width="50px" style="transform: rotate(180deg);">
+                </div> -->
+                
+            </div>
+        </section>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/disciplinas.js"></script>
+
+</body>
+<footer class="cinzaEscuro align-items-end">
+    <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
+</footer>
+
+</html>

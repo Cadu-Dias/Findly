@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/estilos.css">
+    <title>Home</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pagina1.html"><img src="esseaqui.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
+                            href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
+                            href="login.html">Login/Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link botao_usuario Cab" href="perfil.html">
+                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main class="container-fluid">
+        <section class="distHeadxQuest row">
+            <h1 class="col-8 offset-2 text-center">Questões e respostas para todas as máterias</h1>
+            <h3 class="col-4 offset-4 text-center my-3">Insira sua Pergunta</h3>
+            <input type="text" name="" id="escrever_pergunta" class="col-6 offset-3 inp border border-3">
+            <button class="col-2 offset-5 btn btn-primary btn-lg text-center my-4 rounded-pill" onclick="iniciarPergunta()">Começar</button>
+        </section>
+        <section class="distSobxPro container">
+            <div class="row">
+                <div class="bgSobre col-8 offset-2">
+                    <article class="mb-5">
+                        <header class="">
+                            <div class="dhd col-8 offset-2">
+                                <div class="text-center mt-5 tam"><strong>Sobre Findly</strong></div>
+                            </div>
+                        </header>
+                        <main class="mt-2">
+                            <div class="tamSobre text-center col-10 offset-1">
+                                <p>
+                                    Criado por um grupo de estudantes do Instituto Mauá de Tecnologia o Findly se
+                                    apresenta como uma opção para os estudantes, cuja faculdade é Mauá, de poder
+                                    realizar
+                                    perguntas referentes a diferentes matérias de cursos específico. A partir disso, ao
+                                    lançar a
+                                    pergunta outros estudantes podem responde-las, de modo a ajudar no melhor
+                                    entendimento
+                                    de um assunto
+                                </p>
+
+                                <p>Nossa missão é: "Proporcionar uma melhor interação entre os estudantes e entendimento
+                                    das
+                                    matérias".</p>
+
+                                Oferecemos uma sistema com uma interface simplificada, para que o usuário sinta-se
+                                confortável ao utilizar a
+                                aplicação Findly, além de apresentar uma mecanica simples para que tanto possa realizar
+                                perguntas ou
+                                responde-las
+                            </div>
+                        </main>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="cinzaEscuro">
+        <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
+    </footer>
+    <script src="/js/inicial.js"></script>
+</body>
+
+</html>

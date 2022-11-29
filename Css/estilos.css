@@ -1,0 +1,61 @@
+#identificador_foto_usuario {
+    visibility: hidden;
+}
+
+.cinzaEscuro{
+    background-color: rgb(41, 46, 51);
+}
+a.lin{
+    font-size: xx-large;
+    text-decoration: none;
+}
+.distHeadxQuest{
+    margin-top: 5%;
+}
+article{
+    margin-top: 6%;
+}
+.inp{
+    color: #adb5bd;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 60px;
+    display: inline;
+}
+section.distSobxProc{
+    margin-top: 4%;
+}
+#escrever_pergunta{
+    color: black;
+}
+.tam{
+    font-size: 50px;
+}
+div.bgSobre{
+    background-color:rgb(242, 242, 242);
+}
+div.tamSobre{
+    font-size:30px;
+}
+
+.fd{
+    
+    color: aliceblue;
+    margin-top: 4%;
+}
+.tamCab{
+    font-size: 24px;
+}
+.medio{
+    font-size: 35px;
+}
+.peq{
+    font-size: 20px;
+}
+.Cab{
+    font-weight: bold;
+}
+a.Cab:hover{
+    text-decoration: underline;
+}
