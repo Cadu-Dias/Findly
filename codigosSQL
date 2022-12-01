@@ -1,0 +1,31 @@
+create database Findly;
+
+use Findly;
+
+create table usuario (id int primary key auto_increment, nome varchar(300) not null, email varchar(300) not null, senha varchar(100) not null);
+
+create table pergunta (id int primary key auto_increment, nome_usuario varchar(300) not null, materia varchar(300) not null, titulo varchar(300) not null, descricao varchar(1000) not null, contador int not null);
+
+create table resposta(id int primary key auto_increment, id_pergunta int not null, nome varchar(300) not null, resposta varchar(10000) not null, curtidas int not null);
+
+describe resposta;
+
+show databases;
+
+select * from usuario;
+
+select * from pergunta;
+
+SELECT * FROM pergunta Where nome_usuario = 'JORGE' ORDER BY contador LIMIT 1;
+select * from resposta;
+
+select * from pergunta, resposta where id_pergunta = 4 and pergunta.id = id_pergunta;
+
+create table pergunta_contador (id int primary key auto_increment, id_pergunta int not null, nome varchar(300) not null, tipo_curtida varchar(300) not null);
+create table resposta_curtida (id int primary key auto_increment, id_resposta int not null, nome varchar(300) not null, curtida varchar(300) not null);
+select * from pergunta_contador;
+select * from resposta_curtida;
+
+delete from pergunta_contador where id_pergunta = 1 and nome = 'Cadu Dias' and tipo_curtida = 'like';
+
+drop table pergunta_contador;
