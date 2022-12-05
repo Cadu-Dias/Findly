@@ -1,8 +1,6 @@
 #identificador_foto_usuario {
     visibility: hidden;
 }
-
-
 .gram{
     font-size: 60px;
 }
@@ -29,6 +27,29 @@ input.caixa{
 .olhoMostrarSenha:hover{
     cursor: pointer;
 }
+.esqueceuSenha{
+    font-size: 20px;
+    margin-left: 70%;
+    border: none;
+    background-color: white;
+}
+.esqueceuSenha:hover{
+    color: rgb(37, 130, 229);
+    text-decoration: underline;
+}
+.enviarEmailVerificacaoSenha{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(37, 130, 229);
+    color: white;
+    padding: 4px;
+}
+.codigoNovaSenha{
+    visibility: hidden;
+}
+.novaSenha{
+    visibility: hidden;
+}
 .box {
     width: 50%;
     float: left;
@@ -40,7 +61,7 @@ input.caixa{
     box-sizing: border-box;
    }
 
-#topBtn{
+   #topBtn{
     position: fixed;
     bottom: 40px;
     right: 40px;
