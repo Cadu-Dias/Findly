@@ -45,3 +45,16 @@
     display: none;
     border-radius: 40px;
 }
+
+@media screen and (max-width: 990px) {
+    .select_options{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .select_options{
+        font-size: 10px;
+    }
+}
+
