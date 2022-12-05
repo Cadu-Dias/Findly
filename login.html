@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="Css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Login/Cadastro</title>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="esseaqui.png"></a>
+            <a class="navbar-brand" href="index.html"><img src="esseaqui.png" alt="Simbolo Findly"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
                         <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
+                        <a class="nav-link tamCab mx-3 Cab" style="color: rgb(15, 151, 178);" Cab id="login_cadastro"
                             href="login.html">Login/Cadastro</a>
                     </li>
                     <li class="nav-item">
@@ -66,13 +66,13 @@
                     </p>
                     <label for="senha" class="offset-2 medio col mb-2">Senha</label>
                     <p>
-                        <input type="text" placeholder="Digite uma senha" id="senha"
+                        <input type="password" placeholder="Digite uma senha" id="senha"
                             class="col-9 offset-2 p-2 border border-4 border-secondary medgra mb-2">
                         <img id="mostraSenhaCadastro" src="olhoSenhaOculta.png" class="olhoMostrarSenha" onclick="mostrarSenhaCadastro()">
                     </p>
                     <label for="senhaConfirmada" class="offset-2 medio col mb-2">Confirme sua senha</label>
                     <p>
-                        <input type="text" placeholder="Digite sua senha novamente" id="senhaConfirmada"
+                        <input type="password" placeholder="Digite sua senha novamente" id="senhaConfirmada"
                             class="col-9 offset-2 p-2 border border-4 border-secondary medgra mb-2">
                         <img id="mostraConfirmarSenhaCadastro" src="olhoSenhaOculta.png" class="olhoMostrarSenha" onclick="mostrarConfirmarSenha()">
                     </p>
@@ -97,10 +97,13 @@
                 </p>
                 <label for="senha" class="offset-2 medio col mb-2">Senha</label>
                 <p>
-                    <input type="text" placeholder="Digite uma senha" id="senha_login"
+                    <input type="password" placeholder="Digite uma senha" id="senha_login"
                         class="col-9 offset-2 p-2 border border-4 border-secondary medgra mb-2">
                     <img id="mostraSenhaLogin" src="olhoSenhaOculta.png" class="olhoMostrarSenha" onclick="mostrarSenhaLogin()">
+                    <button class="offset-4 esqueceuSenha" data-bs-toggle="modal"
+                    data-bs-target="#modalEsqueceuSenha" onclick="removerItensNovaSenha()"><strong>Esqueci a Senha</strong></button>
                 </p>
+                
                 <button class="btn btn-primary col-4 offset-4 medgra rounded-pill botao" onclick="loginUsuario()">
                     <Strong>Logar</Strong>
                 </button>
@@ -142,7 +145,61 @@
                     </div>
             </div>
         </div>
+
+        <div
+            class="modal fade"
+            id="modalEsqueceuSenha"
+            aria-labelledby="modalEsqueceuSenha"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">
+                                Esqueceu a Senha
+                            </h1>
+                        </div>
+                        <div class="modal-body">
+                            <div
+                                class="d-none alert alert-dismissible fade
+                                alert-modal-esqueceuSenha"
+                                role="alert">
+                            </div>
+                            <div class="mb-3">
+                                <label for="usuarioSenhaInput" class="col-form-label" id="labelCodigoSenha">Digite o seu E-mail: </label>
+                                <input type="text" id="ususarioEmailSenhaInput" class="insercao_email_Senha"class="form-control">
+                                <button class="enviarEmailVerificacaoSenha" onclick="enviarEmailVerificacao2()">Enviar E-mail</button>
+                            </div> 
+                            <div class="mb-3 codigoNovaSenha">
+                                <label for="usuarioSenhaInput" class="col-form-label" id="labelCodigoSenha">Um código foi enviado para o seu E-mail, para proceder digite-o: </label>
+                                <input type="text" id="ususarioCodigoSenhaInput" class="insercao_codigo_Senha"class="form-control">
+                                <button class="enviarEmailVerificacaoSenha" id="enviarCodigoNovaSenha">Enviar Código</button>
+                            </div> 
+                            <div class="mb-3 novaSenha">
+                                <label for="usuarioNovaSenhaInput" class="col-form-label" id="labelCodigoSenha">Digite sua nova senha: </label>
+                                <input type="text" id="ususarioNovaSenhaInput" class="insercao_nova_Senha"class="form-control">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="button"  class="btn btn-primary disabled botaoNovaSenha">
+                                Alterar Senha
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
         <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+        <div vw="vw" class="enabled">
+            <div vw-access-button="vw-access-button" class="active"></div>
+            <div vw-plugin-wrapper="vw-plugin-wrapper">
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
@@ -166,6 +223,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/login.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window
+                .VLibras
+                .Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 <footer class="cinzaEscuro">
     <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
