@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="/Css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <title>Home</title>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="esseaqui.png"></a>
+            <a class="navbar-brand" href="index.html"><img src="esseaqui.png" class="border"alt="Simbolo Findly"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -82,7 +81,7 @@
 
                                 Oferecemos uma sistema com uma interface simplificada, para que o usuário sinta-se
                                 confortável ao utilizar a
-                                aplicação Findly, além de apresentar uma mecanica simples para que tanto possa realizar
+                                aplicação Findly, além de apresentar uma mecânica simples para que tanto possa realizar
                                 perguntas ou
                                 responde-las
                             </div>
@@ -92,12 +91,25 @@
             </div>
         </section>
     </main>
+
     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
     <footer class="cinzaEscuro">
         <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
     </footer>
-    
+    <div vw="vw" class="enabled">
+        <div vw-access-button="vw-access-button" class="active"></div>
+        <div vw-plugin-wrapper="vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
     <script src="/js/inicial.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window
+                .VLibras
+                .Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 
 </html>
