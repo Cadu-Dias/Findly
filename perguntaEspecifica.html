@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="Css/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Pergunta especifica</title>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" onclick="removerItensLocalStorage()" ><img class="logo"src="esseaqui.png"></a>
+            <a class="navbar-brand" href="index.html" onclick="removerItensLocalStorage()" ><img class="logo"src="esseaqui.png" alt="Simbolo Findly"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,6 +40,17 @@
                         <a class="nav-link botao_usuario Cab" onclick="removerItensLocalStorage()" href="perfil.html">
                             <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
                         </a>
+                    </li>
+                    <li>
+                        <div class="input-group mt-2">
+                            <div class="form-outline">
+                              <input id="input-pesquisa" type="search" id="form1" class="form-control" placeholder="Pesquise uma Pergunta"/>
+                              
+                            </div>
+                            <button id="botao_pesquisa" type="button" class="btn btn-primary" onclick="pesquisarPergunta()">
+                              <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -88,13 +99,28 @@
             </article>
 
     </article>
+
     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <footer class="cinzaEscuro">
+	<div class="mt-5 text-white p-5 text-center">Todos os direitos reservados ©</div>
+    </footer>
+    <div vw="vw" class="enabled">
+        <div vw-access-button="vw-access-button" class="active"></div>
+        <div vw-plugin-wrapper="vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/perguntaEspecifica.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window
+                .VLibras
+                .Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
-<footer class="cinzaEscuro">
-    <div class="mt-5 text-white p-5 text-center">Todos os direitos reservados ©</div>
-</footer>
+
 
 </html>
