@@ -1,3 +1,37 @@
+$(document).ready(function(){
+
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 40){
+      $('#topBtn').fadeIn();
+    } else{
+      $('#topBtn').fadeOut();
+    }
+  });
+
+  $("#topBtn").click(function(){
+    $('html ,body').animate({scrollTop : 0},800);
+  });
+});
+
+async function pesquisarPergunta() {
+
+  const input_pesquisa = document.querySelector('#input-pesquisa')
+  let string_input_pesquisa = input_pesquisa.value
+  
+  if(string_input_pesquisa === "") {
+      Swal.fire({
+          icon: 'error',
+          title: 'Você deve escrever algo para pesquisar a pergunta',
+          showCloseButton: true,
+      });
+  }
+  else{
+      localStorage.setItem("pergunta_pesquisa", string_input_pesquisa)
+      window.location.href = 'disciplinas.html'
+  }
+
+}
+
 async function inserirDados() {
 
     let nome = localStorage.getItem("name")
@@ -63,17 +97,3 @@ async function sairDaConta(){
 
 inserirUsuario()
 
-$(document).ready(function(){
-
-    $(window).scroll(function(){
-      if($(this).scrollTop() > 40){
-        $('#topBtn').fadeIn();
-      } else{
-        $('#topBtn').fadeOut();
-      }
-    });
-  
-    $("#topBtn").click(function(){
-      $('html ,body').animate({scrollTop : 0},800);
-    });
-});
