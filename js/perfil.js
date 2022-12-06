@@ -98,6 +98,26 @@ async function mostrarDados(){
     email_usuario.textContent = "E-mail: " + email
 }
 
+async function pesquisarPergunta() {
+
+    const input_pesquisa = document.querySelector('#input-pesquisa')
+    let string_input_pesquisa = input_pesquisa.value
+    
+    if(string_input_pesquisa === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Você deve escrever algo para pesquisar a pergunta',
+            showCloseButton: true,
+        });
+    }
+    else{
+        localStorage.setItem("pergunta_pesquisa", string_input_pesquisa)
+        window.location.href = 'disciplinas.html'
+    }
+  
+  }
+
+
 $(document).ready(function(){
 
     $(window).scroll(function(){
