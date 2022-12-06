@@ -11,18 +11,23 @@
     <title>Home</title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+    <nav class="navbar navbar-expand-lg p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="esseaqui.png" class="border"alt="Simbolo Findly"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand border" href="index.html"><img src="esseaqui.png"></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
-                            href="disciplinas.html">Disciplinas</a>
+                        <a class="nav-link active tamCab  text-white mx-3 Cab" aria-current="page" href="disciplinas.html">Disciplinas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
@@ -31,13 +36,23 @@
                         <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
-                            href="login.html">Login/Cadastro</a>
+                        <a class="nav-link text-white tamCab mx-3 Cab" id="login_cadastro" href="login.html">Login/Cadastro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link botao_usuario Cab" href="perfil.html">
                             <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
                         </a>
+                    </li>
+                    <li>
+                        <div class="input-group mt-2">
+                            <div class="form-outline">
+                              <input id="input-pesquisa" type="search" id="form1" class="form-control" placeholder="Pesquise uma Pergunta"/>
+                              
+                            </div>
+                            <button id="botao_pesquisa" type="button" class="btn btn-primary" onclick="pesquisarPergunta()">
+                              <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
