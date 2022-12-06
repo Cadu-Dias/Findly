@@ -187,7 +187,7 @@ async function pegarDadosResposta(){
                 else{
                     Swal.fire({
                         icon: 'error',
-                        title: 'Você não pode dar Like ou Dislike na própria pergunta',
+                        title: 'Você não pode dar Like ou Dislike na própria resposta',
                         showCloseButton: true,
                     });
                 }
@@ -446,6 +446,26 @@ async function verRespostaCurtida() {
     }
 }
 
+async function pesquisarPergunta() {
+
+    const input_pesquisa = document.querySelector('#input-pesquisa')
+    let string_input_pesquisa = input_pesquisa.value
+    
+    if(string_input_pesquisa === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Você deve escrever algo para pesquisar a pergunta',
+            showCloseButton: true,
+        });
+    }
+    else{
+        localStorage.setItem("pergunta_pesquisa", string_input_pesquisa)
+        window.location.href = 'disciplinas.html'
+    }
+  
+  }
+
+
 async function inserirResposta(){
     const URLCompleta6 = 'http://localhost:3000/perguntaEspecifica'
     
@@ -462,8 +482,10 @@ async function inserirResposta(){
         Swal.fire({
             icon: 'success',
             title: 'Resposta Enviada!',
+            text: 'Reinicie a página para a perguntar aparecer',
             showCloseButton: true
         });
+        
     }
     else{
         Swal.fire({
@@ -510,6 +532,7 @@ async function sairDaConta(){
 }
 
 inserirUsuario()
+
 
 $(document).ready(function(){
 
