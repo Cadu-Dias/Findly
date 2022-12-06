@@ -9,22 +9,27 @@
     <link rel="stylesheet" href="Css/perfil.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Perfil usuario</title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+    <nav class="navbar navbar-expand-lg p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="esseaqui.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
-                            href="disciplinas.html">Disciplinas</a>
+                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page" href="disciplinas.html">Disciplinas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
@@ -33,13 +38,23 @@
                         <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
-                            href="login.html">Login/Cadastro</a>
+                        <a class="nav-link text-white tamCab mx-3 Cab" id="login_cadastro" href="login.html">Login/Cadastro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link botao_usuario Cab" href="perfil.html">
-                            <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
+                            <img class="foto_usuario border" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
                         </a>
+                    </li>
+                    <li>
+                        <div class="input-group mt-2">
+                            <div class="form-outline">
+                              <input id="input-pesquisa" type="search" id="form1" class="form-control" placeholder="Pesquise uma Pergunta"/>
+                              
+                            </div>
+                            <button id="botao_pesquisa" type="button" class="btn btn-primary" onclick="pesquisarPergunta()">
+                              <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -76,8 +91,7 @@
                 <label class="border border-3 border-dark col-9 fontText p-4 margLab">
                     <div class="h1 marg" id="pergunta_titulo">Você ainda não realizou sua Pergunta!</div>
                     <div id="pergunta_descricao">
-                        Para realiza-lá vá na aba de perguntar coloque o titulo, a descrição e escolha a matéria e envie-a!
-                        qui officia deserunt mollit anim id est laborum.
+                        Para realiza-lá vá na parte de perguntar coloque o título, a descrição e escolha a matéria e envie-a!
                     </div>
                 </label>
         </section>
@@ -92,19 +106,33 @@
                 <label class="border border-3 border-dark col-9 fontText p-4 margLab">
                     <div class="h1 marg" id="resposta_titulo">Você ainda não respondeu uma pergunta!</div>
                     <div id="resposta_descricao">
-                        Para realiza-lá vá na aba de disciplinas, escolha uma pergunta para responde-lá, clique nela e procure a região de enviar resposta
+                        Para realiza-lá vá na parte de disciplinas, escolha uma pergunta para respondê-lá, clique nela e procure a região de enviar resposta
                     </div>
                 </label>
         </section>
         </main>
     </article>
+
     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+    <footer class="cinzaEscuro">
+    	<div class="fd p-5 text-center">Todos os direitos reservados ©</div>
+     </footer>
+    <div vw="vw" class="enabled">
+        <div vw-access-button="vw-access-button" class="active"></div>
+        <div vw-plugin-wrapper="vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/perfil.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window
+                .VLibras
+                .Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
-<footer class="cinzaEscuro">
-    <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
-</footer>
+
 
 </html>
