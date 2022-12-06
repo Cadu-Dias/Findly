@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <title>Disciplinas</title>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 cinzaEscuro">
+    <nav class="navbar navbar-expand-lg p-3 mb-2 cinzaEscuro">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="esseaqui.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white tamCab mx-3 Cab" aria-current="page"
-                            href="disciplinas.html">Disciplinas</a>
+                        <a class="nav-link active tamCab mx-3 Cab" aria-current="page" href="disciplinas.html" style="color: rgb(15, 151, 178);">Disciplinas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white tamCab mx-3 Cab" href="perguntar.html">Perguntar</a>
@@ -34,13 +38,23 @@
                         <a class="nav-link text-white tamCab mx-3 Cab" href="contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white tamCab mx-3 Cab" Cab id="login_cadastro"
-                            href="login.html">Login/Cadastro</a>
+                        <a class="nav-link text-white tamCab mx-3 Cab" id="login_cadastro" href="login.html">Login/Cadastro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link botao_usuario Cab" href="perfil.html">
                             <img class="foto_usuario" id="identificador_foto_usuario" src="foto_perfil.png" width="60px">
                         </a>
+                    </li>
+                    <li>
+                        <div class="input-group mt-2">
+                            <div class="form-outline">
+                              <input id="input-pesquisa" type="search" id="form1" class="form-control" placeholder="Pesquise uma Pergunta"/>
+                              
+                            </div>
+                            <button id="botao_pesquisa" type="button" class="btn btn-primary" onclick="pesquisarPergunta()">
+                              <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -50,16 +64,16 @@
 
 <body onload="pegarPergunta()" >
     <article class="container-fluid">
-    <div class="col-6 offset-3 tam text-center" for="dist">Qual diciplina voce deseja escolher?</div>
-    <select name="disciplina" id="dist"
-        class="sl bg-primary p-2 mt-4 col-4 offset-4 text-center h2 rounded-pill border border-primary" onchange="especificar_materia()">
-        <option class="select_options">Todas as Matérias</option>
-        <option class="select_options">Lógica Matemática e Matemática Discreta</option>
-        <option class="select_options">Estatistica</option>
-        <option class="select_options">Legislação e Etica em Tecnologia da Informação</option>
-        <option class="select_options">Desenvolvimento Front-End</option>
-        <option class="select_options">Interface e Experiência do Usuário</option>
-    </select>
+        <div class="col-6 offset-3 tam text-center" for="dist">Qual diciplina você deseja escolher?</div>
+        <select name="disciplina" id="dist"
+            class="sl bg-primary p-2 mt-4 col-4 offset-4 text-center h2 rounded-pill border border-primary" onchange="especificar_materia()">
+            <option class="select_options">Todas as Matérias</option>
+            <option class="select_options">Lógica Matemática e Matemática Discreta</option>
+            <option class="select_options">Estatistica</option>
+            <option class="select_options">Legislação e Etica em Tecnologia da Informação</option>
+            <option class="select_options">Desenvolvimento Front-End</option>
+            <option class="select_options">Interface e Experiência do Usuário</option>
+        </select>
     <!-- <section class="container">
         <article class="row">
             <div class="distSel offset-1 tamPer font mb-5">Perguntas de todas as matérias</div>
@@ -84,6 +98,7 @@
         <section class="container mt-5 pt-5 seccao_pergunta">
             <div class="offset-1 tamPer mb-5" id="pergunta_materia_x">Perguntas de todas as materias</div>
 
+            
             <div class="row perguntas" >
                 
                  <!-- <div><img src="foto_perfil.png" alt="" width="90px"><strong class="tamNam ms-5">Nome usuario</strong></div>
@@ -100,7 +115,15 @@
             </div>
         </section>
     </article>
+
     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <div vw="vw" class="enabled">
+        <div vw-access-button="vw-access-button" class="active"></div>
+        <div vw-plugin-wrapper="vw-plugin-wrapper">
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.4/dist/sweetalert2.all.min.js"></script>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -117,7 +140,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/disciplinas.js"></script>
-
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window
+                .VLibras
+                .Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 <footer class="cinzaEscuro align-items-end">
     <div class="fd p-5 text-center">Todos os direitos reservados ©</div>
